@@ -1,0 +1,19 @@
+{
+  "name": "mens.peaksrecovery.com",
+  "version": "1.0.0",
+  "description": "mens.peaksrecovery.com",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -r dist/* && rm -r docs/* && muleify pack src dist && muleify pack src docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebCab-Design/mens.peaksrecovery.com.git"
+  },
+  "author": "WebCab Design",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/WebCab-Design/mens.peaksrecovery.com/issues"
+  },
+  "homepage": "https://github.com/WebCab-Design/mens.peaksrecovery.com#readme"
+}
