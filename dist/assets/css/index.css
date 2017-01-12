@@ -39,11 +39,12 @@ section {
     padding-right: 1rem;
     margin: 1rem auto;
     max-width: 960px;
+    text-align: left;
 }
 
 section h2, section h3 {
     color: #6db4b1;
-    margin: 2rem 0 1rem 0;
+    font-weight: 700;
 }
 
 p {
@@ -81,6 +82,30 @@ h2 {
 h3 {
     color: #6db4b1;
     font-size: 1.5em;
+<<<<<<< HEAD
+=======
+    font-weight: 300;
+}
+
+h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.center-text {
+    text-align: center;
+}
+
+/*
+	header
+*/
+header {
+    z-index: 1;
+    width: 100%;
+    display: block;
+    position: relative;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+>>>>>>> 1be0d2a5e264aedb6c70c3c29e73111a60a9db38
 }
 
 .connect {
@@ -117,9 +142,13 @@ h3 {
 }
 
 .logo {
-    width: 25%;
-    display: inline-block;
-    vertical-align: middle;
+    padding: 1rem;
+}
+
+.logo > img {
+    max-height: 125px;
+    display: block;
+    margin: auto;
 }
 
 .slider {
