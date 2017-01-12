@@ -39,6 +39,7 @@ section {
     padding-right: 1rem;
     margin: 1rem auto;
     max-width: 960px;
+    text-align: left;
 }
 
 section h2, section h3 {
@@ -117,9 +118,13 @@ h3 {
 }
 
 .logo {
-    width: 25%;
-    display: inline-block;
-    vertical-align: middle;
+    padding: 1rem;
+}
+
+.logo > img {
+    max-height: 125px;
+    display: block;
+    margin: auto;
 }
 
 .slider {
