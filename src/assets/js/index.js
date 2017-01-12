@@ -25,20 +25,4 @@ window.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 
-	function getElmentPostion (element) {
-		var elements = element.parentNode.children;
-
-		for (var i = 0; i < elements.length; i++) {
-			var isSameNode = elements[i].isSameNode(element);
-
-			if (isSameNode) {
-				return i;
-			}
-		}
-
-	}
-
-	var el = document.querySelector('query');
-	var index = getElmentPostion(el);
-
 });
