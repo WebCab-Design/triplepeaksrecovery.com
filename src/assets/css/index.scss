@@ -34,11 +34,13 @@ section {
 	padding-left: 1rem;
 	padding-right: 1rem;
 	margin: 1rem auto;
-	max-width: 960px
+	max-width: 960px;
+	text-align: left
+	;
 }
 section h2, section h3 {
 	color: $blue;
-	margin: 2rem 0 1rem 0;
+	font-weight: 700;
 }
 p {
 	margin: 8px 0;
@@ -92,9 +94,9 @@ header {
 	position: relative;
 	box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
 }
-header img {
-	width: 100%;
-}
+// header img {
+// 	width: 100%;
+// }
 .connect {
 	margin-bottom: 16px;
 	border-bottom: solid 1px $light-grey;
@@ -123,9 +125,12 @@ header img {
 	background: #d94a39;
 }
 .logo {
-    width: 25%;
-	display: inline-block;
-    vertical-align: middle;
+	padding: 1rem;
+	> img{
+		max-height: 125px;
+		display: block;
+		margin: auto;
+	}
 }
 .nav-bar {
 	z-index: 1;
