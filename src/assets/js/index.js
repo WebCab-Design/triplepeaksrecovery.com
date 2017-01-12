@@ -25,19 +25,20 @@ window.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 
+	var oldIndex = 0;
 	var panels = document.querySelectorAll('.panel');
 	var tabs = document.querySelectorAll('.tab');
 
 	for (var i = 0; i < tabs.length; i++) {
-		var tab = tabs[i];
-		var panel = panels[i];
+		tabs[i].setAttribute('data-index', i);
 
-		panel.setAttribute('data-index', i);
-		var index = panel.getAttribute('data-index');
-		// console.log(index);
+		tabs[i].addEventListener('click', function () {
+			var index = this.getAttribute('data-index');
 
-		tab.addEventListener('click', function () {
-			panel[index].classList.toggle('active');
+			panels[oldIndex].classList.remove('active');
+			panels[index].classList.add('active');
+
+			oldIndex = index;
 		});
 
 	}
