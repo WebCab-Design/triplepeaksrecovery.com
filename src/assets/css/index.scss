@@ -6,53 +6,66 @@ $neutral: #dfedef;
 $brown-logo: #3c2825;
 $serenity: #382e70;
 
-*  {
+* {
 	margin: 0;
 	padding: 0;
 	font-size: 16px;
-	transition: all 300ms ease;
-	-o-transition: all 300ms ease;
-	-ms-transition: all 300ms ease;
-	-moz-transition: all 300ms ease;
-	-webkit-transition: all 300ms ease;
 	font-family: 'Open Sans', sans-serif;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	transition: all 300ms ease;
 }
 body {
 	background: white;
 	overflow-x: hidden;
 }
-main.blur {
-	filter: blur(10px);
-	-o-filter: blur(10px);
-	-ms-filter: blur(10px);
-	-moz-filter: blur(10px);
-	-webkit-filter: blur(10px);
-}
 header, main, footer {
 	width: 100%;
 }
 header {
-	z-index: 1;
-	width: 100%;
-	display: block;
-	box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+	top: 0;
+	left: 0;
+	position: fixed;
 }
 section {
-	padding-left: 1rem;
-	padding-right: 1rem;
-	margin: 1rem auto;
-	max-width: 960px;
-	text-align: left;
+	padding: 10%;
+    box-sizing: border-box;
+
+	width: 100vw;
+	min-height: 100vh;
+
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-ms-align-items: center;
+	-moz-align-items: center;
+	-webkit-align-items: center;
+	align-items: center;
+
+	-ms-justify-content: center;
+	-moz-justify-content: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+
+	-ms-flex-direction: column;
+	-moz-flex-direction: column;
+	-webkit-flex-direction: column;
+	flex-direction: column;
 }
-section h2, section h3 {
-	color: $primary;
-	margin: 2rem 0 1rem 0;
+section h3 {
+	margin: 2rem auto;
+	text-align: center;
 }
 p {
-	margin: 1rem 0;
-}
-ul {
-	margin-left: 1.5rem;
+	margin: 1rem auto;
 }
 a {
 	cursor: pointer;
@@ -62,38 +75,58 @@ a {
 }
 hr {
 	margin: 16px auto;
-	border: solid 0.5px #eee;
 	border-style: solid;
+	border: solid 0.5px #eee;
 }
 h1 {
 	color: white;
-	font-size: 3em;
+	font-size: 2.5em;
 }
 h2 {
 	color: white;
-	font-size: 2.5em;
+	font-size: 2em;
 	font-weight: 100;
 }
 h3 {
 	color: $primary;
 	font-size: 1.5em;
 }
-.connect {
-	margin-bottom: 16px;
-	border-bottom: solid 1px $light-grey;
-	a {
-		color: $primary;
-		padding: 0.8rem;
-		text-decoration: none;
-		font-size: 0.8rem;
-	}
+
+.hvc {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-ms-align-items: center;
+	-moz-align-items: center;
+	-webkit-align-items: center;
+	align-items: center;
+
+	-ms-justify-content: center;
+	-moz-justify-content: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+
+	-ms-flex-direction: column;
+	-moz-flex-direction: column;
+	-webkit-flex-direction: column;
+	flex-direction: column;
 }
-.connect a:hover {
+
+.connect {
 	background: rgba(0,0,0,0.1);
 }
-.connect > div:nth-child(2) a {
-	padding: 8px;
-	vertical-align: middle;
+.connect a:hover {
+	background: rgba(0,0,0,0.6);
+}
+.connect a {
+	padding: 6px;
+	color: white;
+}
+.connect > div:nth-child(1) > a:nth-child(1) {
+	padding: 10px;
 }
 .connect > div:nth-child(2) > a:nth-child(1) {
 	background: #55acee;
@@ -104,6 +137,7 @@ h3 {
 .connect > div:nth-child(2) > a:nth-child(3) {
 	background: #d94a39;
 }
+
 .logo {
 	padding: 1rem;
 	> img{
@@ -114,50 +148,57 @@ h3 {
 }
 
 .slider {
-	background-color: $light-grey;
+	width: 100%;
+	height: 500px;
+	background-size: cover;
+	background-color: #f5f5f5;
+	background-position: center;
+	background-repeat: no-repeat;
 	border-bottom: 1.4rem solid $primary;
 }
-.slider > div {
+.slide > div {
+	padding-top: calc(250px - 2.5rem - 2rem);
+	padding-bottom: calc(250px - 2.5rem - 2rem);
 	transition: all 1s ease-in-out;
-	-o-transition: all 1s ease-in-out;
 	-ms-transition: all 1s ease-in-out;
 	-moz-transition: all 1s ease-in-out;
 	-webkit-transition: all 1s ease-in-out;
 }
-.main-image {
-	width: 100%;
-	height: 300px;
-	overflow: hidden;
+.slide h1, .slide h2 {
+	color: white;
 	text-align: center;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-color: $light-grey;
-	h1 {
-		margin-top: 100px;
-	}
-	h1,h3{
-		color: #fff;
-		text-shadow: 0px 0px 5px #000;
-	}
 }
-.paralax {
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
+.slide.zero {
+	background-image: url('http://res.cloudinary.com/dbc2wlvk8/image/upload/c_fill,fl_any_format.lossy,h_800,w_2000/v1481306851/Triple-Peaks-First-Five-Guys_voe1bg.jpg');
 }
+.slide.one {
+	background-image: url('http://res.cloudinary.com/dbc2wlvk8/image/upload/c_fill,fl_any_format.lossy,h_800,w_2000/v1481306851/Triple-Peaks-First-Five-Guys_voe1bg.jpg');
+}
+
 .paralax {
 	padding: 10%;
-	position: static;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+	text-align: center;
+
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
-	-o-background-size: cover;
+
 	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
+.paralax p {
+	color: white;
+	margin: auto;
+}
+.paralax h3 {
+	color: white;
+	margin: 1rem;
+}
+.paralax .button {
+	margin: 1rem;
+}
+
 .button {
 	cursor: pointer;
 	font-size: 1rem;
@@ -178,23 +219,6 @@ h3 {
 	background: $primary;
 	&:hover {
 		background: lighten($primary, 10%);
-	}
-}
-.verify-button {
-	display: block;
-	text-align: center;
-	position: relative;
-	margin-top: -2.3rem;
-	text-transform: uppercase;
-	a {
-		color: #fff;
-		padding: 1rem;
-		background: $primary;
-		border-radius: 4px;
-		&:hover {
-			background: lighten($primary, 10%);
-		}
-		box-shadow: 0 0 5px 1px rgba(0,0,0,0.3);
 	}
 }
 
@@ -221,10 +245,8 @@ h3 {
 }
 
 form {
-	margin: auto;
+	padding: 1rem;
 	max-width: 960px;
-	padding: 1rem;
-	padding: 1rem;
 }
 form input, form textarea {
 	width: 100%;
