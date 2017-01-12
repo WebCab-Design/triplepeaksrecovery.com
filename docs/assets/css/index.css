@@ -257,6 +257,32 @@ h3 {
     text-align: left;
 }
 
+.tabs > div {
+    display: inline-block;
+    border-right: 1px solid #cacaca;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.tabs > div:nth-last-child(1) {
+    border: none;
+}
+
+.tabs > div:hover {
+    background: #f6f6f6;
+}
+
+.panels
+> div {
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+.panel.active {
+    position: static;
+}
+
 form {
     padding: 1rem;
     max-width: 960px;

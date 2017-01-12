@@ -25,4 +25,21 @@ window.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 
+	var panels = document.querySelectorAll('.panel');
+	var tabs = document.querySelectorAll('.tab');
+
+	for (var i = 0; i < tabs.length; i++) {
+		var tab = tabs[i];
+		var panel = panels[i];
+
+		panel.setAttribute('data-index', i);
+		var index = panel.getAttribute('data-index');
+		// console.log(index);
+
+		tab.addEventListener('click', function () {
+			panel[index].classList.toggle('active');
+		});
+
+	}
+
 });
