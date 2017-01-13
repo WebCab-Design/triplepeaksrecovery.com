@@ -29,11 +29,10 @@ header {
 	position: fixed;
 }
 section {
-	padding: 10%;
-    box-sizing: border-box;
-
-	width: 100vw;
-	min-height: 100vh;
+  box-sizing: border-box;
+	padding: 6%;
+	// width: 100vw;
+	// min-height: 100vh;
 
 	background-size: cover;
 	background-position: center;
@@ -245,18 +244,18 @@ h3 {
 }
 
 // Panels/Tabs
+.tabs {
+	background: $light-grey;
+}
 .tabs > div {
 	display: inline-block;
-	border-right: 1px solid #cacaca;
 	padding: 0.5rem;
 	cursor: pointer;
-	border-collapse: collapse;
-	margin-left: -3px;
 	&:nth-child(1) {
-		border-left: 1px solid #cacaca;
+		border-left: 3px solid #cacaca;
 	}
 	&:hover {
-		background: #f6f6f6;
+		background: $light-grey;
 	}
 }
 .panels
@@ -269,10 +268,12 @@ h3 {
 	position: static;
 }
 .tab.active {
-	border-top: 4px solid green;
-    background: #f6f6f6;
-	color: green;
+    border-bottom: 4px solid green;
+    background: $light-grey;
+    color: green;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.3);
 }
+
 
 form {
 	padding: 1rem;
