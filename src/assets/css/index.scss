@@ -250,8 +250,10 @@ h3 {
 	border-right: 1px solid #cacaca;
 	padding: 0.5rem;
 	cursor: pointer;
-	&:nth-last-child(1) {
-		border: none;
+	border-collapse: collapse;
+	margin-left: -3px;
+	&:nth-child(1) {
+		border-left: 1px solid #cacaca;
 	}
 	&:hover {
 		background: #f6f6f6;
@@ -265,6 +267,11 @@ h3 {
 	}
 .panel.active {
 	position: static;
+}
+.tab.active {
+	border-top: 4px solid green;
+    background: #f6f6f6;
+	color: green;
 }
 
 form {

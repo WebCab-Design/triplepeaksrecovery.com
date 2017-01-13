@@ -26,21 +26,24 @@ window.addEventListener('DOMContentLoaded', function () {
 	}
 
 	var oldIndex = 0;
-	var panels = document.querySelectorAll('.panel');
 	var tabs = document.querySelectorAll('.tab');
-
-	for (var i = 0; i < tabs.length; i++) {
-		tabs[i].setAttribute('data-index', i);
-
+	var panels = document.querySelectorAll('.panel');
+	function tabHandler () {
 		tabs[i].addEventListener('click', function () {
 			var index = this.getAttribute('data-index');
 
+			tabs[oldIndex].classList.remove('active');
+			tabs[index].classList.toggle('active');
 			panels[oldIndex].classList.remove('active');
-			panels[index].classList.add('active');
+			panels[index].classList.toggle('active');
 
 			oldIndex = index;
 		});
+	}
 
+	for (var i = 0; i < tabs.length; i++) {
+		tabs[i].setAttribute('data-index', i);
+		tabHandler();
 	}
 
 });
