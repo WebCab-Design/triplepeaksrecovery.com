@@ -118,11 +118,13 @@ h3 {
 	background: rgba(0,0,0,0.1);
 }
 .connect a:hover {
-	background: rgba(0,0,0,0.6);
+	background: none;
+	border-bottom: 5px solid rgba(109,180,177,0.6);
 }
 .connect a {
 	padding: 6px;
 	color: white;
+	background: rgba(109,180,177,0.6);
 }
 .connect > div:nth-child(1) > a:nth-child(1) {
 	padding: 10px;
