@@ -16,7 +16,7 @@
 	}
 	section:first-of-type img {
 		width: 100%;
-		max-width: 500px;
+		max-width: 400px;
 		min-width: 200px;
 	}
 	section:first-of-type h1, main section:first-of-type h2 {
@@ -29,12 +29,20 @@
 	section:first-of-type h2 {
 		color: #74b944;
 	}
+	.scroll {
+		background: none !important;
+		text-align: center;
+		color: #fff;
+	}
 </style>
 
 <section>
-	<img src="http://res.cloudinary.com/dbc2wlvk8/image/upload/c_fill,g_north,h_500,w_500/v1483653284/peaks/peaks-centers/Triple-Peaks-Recovery-Colorado-Springs-Logo.png" />
+	<img src="http://res.cloudinary.com/dbc2wlvk8/image/upload/c_fill,g_north,h_450,w_450/v1483653284/peaks/peaks-centers/Triple-Peaks-Recovery-Colorado-Springs-Logo.png" alt="Triple Peaks logo" />
 	<h1>Triple Peaks Recovery Center</h1>
 	<h2>A Caring Recovery for Young Adult Men</h2>
+	<div class="scroll">
+		<a href="#top"><div class="arrow-down"></div></a>
+	</div>
 </section>
 
 <!-- <div class="slider" data-index="0" data-interval="10000">
@@ -51,7 +59,7 @@
 	</div>
 </div> -->
 
-<section>
+<section id="top">
 	<h3>A Caring Recovery for Young Adult Men</h3>
 	<div class="row">
 		<div class="col-xs-12 col-sm-5">
@@ -108,49 +116,58 @@
 	</div>
 </section>
 
-<!-- <section>
-	<div class="row">
-		<div class="col-xs-12 center-xs">
-			<h2>Contact Us</h2>
-		</div>
+<div class="contact-section">
+	<div style="text-align: center;">
+		<h2>Contact Triple Peaks Recovery | <span>get help!</span></h2>
+		<hr>
 	</div>
-	<form class="form">
-		<div class="row">
-			<div class="col-xs-12 col-sm-6">
-				<input type="text" name="First Name" placeholder="First Name">
+
+	<div>
+		<form class="form">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6">
+					<input type="text" name="First Name" placeholder="First Name">
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<input type="text" name="Last Name" placeholder="Last Name">
+				</div>
 			</div>
-			<div class="col-xs-12 col-sm-6">
-				<input type="text" name="Last Name" placeholder="Last Name">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6">
+					<input type="number" name="Phone" placeholder="Phone">
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<input type="text" name="Email" placeholder="Email">
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12 col-sm-6">
-				<input type="number" name="Phone" placeholder="Phone">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6">
+					<input type="text" name="Insurance" placeholder="Insurance">
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<input type="text" name="Seeking Care For" placeholder="Seeking care for?">
+				</div>
 			</div>
-			<div class="col-xs-12 col-sm-6">
-				<input type="text" name="Email" placeholder="Email">
+			<div class="row">
+				<div class="col-xs-12">
+					<textarea type="text" name="Message" placeholder="What can we help you with?"></textarea>
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12 col-sm-6">
-				<input type="text" name="Insurance" placeholder="Insurance">
+			<div class="row">
+				<div class="col-xs">
+					<input type="hidden" name="Form Name" value="Peaks Recovery - Contact">
+					<input type="hidden" name="*formname" value="Peaks Recovery - Contact">
+					<input class="button green" type="submit" value="Get Help">
+				</div>
+				<div class="col-xs">
+					<img src="http://res.cloudinary.com/dbc2wlvk8/image/upload/fl_any_format.lossy/v1480971111/peaks/JCNQA_1.png" alt="">
+					<img src="http://res.cloudinary.com/dbc2wlvk8/image/upload/fl_any_format.lossy/v1480971111/peaks/NAATP-Peaks.png" alt="">
+				</div>
 			</div>
-			<div class="col-xs-12 col-sm-6">
-				<input type="text" name="Seeking Care For" placeholder="Seeking care for?">
+			<div class="row">
+				<p><span>By submitting this form, I agree to be contacted by Peak Recovery Centers.</span> One of our admissions coordinators will contact you shortly to discuss your recovery options. All information shared with us is completely confidential.</p>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12">
-				<textarea type="text" name="Message" placeholder="What can we help you with?"></textarea>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12 center-xs">
-				<input type="hidden" name="Form Name" value="Peaks Recovery - Contact">
-				<input type="hidden" name="*formname" value="Peaks Recovery - Contact">
-				<input class="button blue" type="submit" value="Get Help">
-			</div>
-		</div>
-	</form>
-	<div class="response"></div>
-</section> -->
+		</form>
+		<div class="response"></div>
+	</div>
+</div>
