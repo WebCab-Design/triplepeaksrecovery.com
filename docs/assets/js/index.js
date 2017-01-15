@@ -25,21 +25,25 @@ window.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 
-	var panels = document.querySelectorAll('.panel');
+	var oldIndex = 0;
 	var tabs = document.querySelectorAll('.tab');
+	var panels = document.querySelectorAll('.panel');
+	function tabHandler () {
+		tabs[i].addEventListener('click', function () {
+			var index = this.getAttribute('data-index');
+
+			tabs[oldIndex].classList.remove('active');
+			tabs[index].classList.toggle('active');
+			panels[oldIndex].classList.remove('active');
+			panels[index].classList.toggle('active');
+
+			oldIndex = index;
+		});
+	}
 
 	for (var i = 0; i < tabs.length; i++) {
-		var tab = tabs[i];
-		var panel = panels[i];
-
-		panel.setAttribute('data-index', i);
-		var index = panel.getAttribute('data-index');
-		// console.log(index);
-
-		tab.addEventListener('click', function () {
-			panel[index].classList.toggle('active');
-		});
-
+		tabs[i].setAttribute('data-index', i);
+		tabHandler();
 	}
 
 });
