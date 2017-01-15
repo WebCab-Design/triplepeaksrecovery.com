@@ -15,10 +15,10 @@ $light-neutral: #dddddd;
 }
 body {
 	background: white;
-	overflow-x: hidden;
 }
-header, main, footer {
+body, header, main, footer {
 	width: 100%;
+	overflow-x: hidden;
 }
 header {
 	top: 0;
@@ -27,8 +27,9 @@ header {
 }
 section:nth-of-type(1) {
 	width: 100vw;
-	min-height: 100vh;
+	height: 100vh;
 	text-align: center;
+
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -107,6 +108,8 @@ h2 {
 h3 {
 	color: $primary;
 	font-size: 1.5em;
+	margin: 1rem auto;
+	text-align: center;
 }
 
 .connect {
@@ -197,9 +200,10 @@ h3 {
 }
 
 .button {
+	margin: 1rem;
 	cursor: pointer;
 	font-size: 1rem;
-	border-radius: 4px;
+	border-radius: 3px;
 	text-transform: uppercase;
 	padding: 0.5rem 1rem 0.5rem 1rem;
 }
@@ -207,13 +211,12 @@ h3 {
 	color: $primary;
 	background: $light-neutral;
 	&:hover {
-		color: $primary;
 		background: lighten($light-neutral, 10%);
 	}
 }
 .primary {
-	color: $light-neutral;
 	background: $primary;
+	color: $light-neutral;
 	&:hover {
 		background: lighten($primary, 10%);
 	}
@@ -241,13 +244,13 @@ h3 {
     text-align: left;
 }
 
-// Panels/Tabs
+// panels/tabs
 .tabs {
 	background: $light-neutral;
 }
 .tabs > div {
-	cursor: pointer;
 	padding: 0.5rem;
+	cursor: pointer;
 	display: inline-block;
 	&:hover {
 		background: $light-neutral;
@@ -260,15 +263,14 @@ h3 {
 	box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.3);
 }
 .panel {
-	top: 0;
-	left: 100%;
-	position: absolute;
+	display: none;
 }
 .panel.active {
-	position: static;
+	display: block;
 }
 
 form {
+	margin: auto;
 	padding: 1rem;
 	max-width: 960px;
 }
@@ -284,8 +286,8 @@ form input[type="submit"] {
 	width: auto;
 }
 form img {
-	padding-right: 1rem;
-	padding-left: 1rem;
+	margin: 2rem auto;
+	padding: 0 1rem;
 	max-width: 250px;
 	max-height: 70px;
 	vertical-align: middle;
@@ -351,31 +353,12 @@ form img:hover {
 
 // contact
 .contact-section {
-	padding-left: 1rem;
-	padding-right: 1rem;
-	width: 100%;
-	padding-bottom: 1rem;
-	padding-top: 1rem;
 	background: rgba($primary, 0.4);
-	h2 {
-		color: $primary;
-		font-weight: 700;
-		margin: 0;
-	}
-	h5 {
-		color: #fff;
-	}
-	div {
-		margin: auto;
-		max-width: 960px;
-	}
 	span {
-		font-weight: bold;
 		color: $primary;
-	}
-	span {
 		font-weight: 100;
-		font-size: 2rem;
+		font-size: 1.5rem;
+		font-weight: thin;
 		padding-bottom: 0.3rem;
 		border-bottom: 1px solid $primary;
 	}
@@ -383,28 +366,26 @@ form img:hover {
 /*
 	footer
 */
-.upper-foot {
+footer > div:nth-child(1) {
 	color: $primary;
 	background: $light-neutral;
 }
-.lower-foot {
+footer > div:nth-child(2) {
 	color: white;
 	background: $primary;
 }
-.lower-foot > div:nth-child(1) img {
+footer > div:nth-child(2) > div:nth-child(1) img {
 	padding: 8px 0;
 	max-width: 50px;
 	max-height: 100px;
 	vertical-align: middle;
 	filter: grayscale(1);
-	-o-filter: grayscale(1);
 	-ms-filter: grayscale(1);
 	-moz-filter: grayscale(1);
 	-webkit-filter: grayscale(1);
 }
-.lower-foot > div:nth-child(1) img:hover {
+footer > div:nth-child(2) > div:nth-child(1) img:hover {
 	filter: grayscale(0);
-	-o-filter: grayscale(0);
 	-ms-filter: grayscale(0);
 	-moz-filter: grayscale(0);
 	-webkit-filter: grayscale(0);
@@ -431,4 +412,22 @@ footer .links > div > h3 {
 footer .copyright a {
 	color: white;
 	text-decoration: underline;
+}
+// mobile
+@media screen and (max-width: 700px) {
+	section:nth-of-type(1) img {
+		width: 50%;
+	}
+	section:nth-of-type(1) h1 {
+		font-size: 1.9rem;
+	}
+	section:nth-of-type(1) h2 {
+		font-size: 1.6rem;
+	}
+	.connect a > span  {
+		display: none;
+	}
+	form img {
+		margin: 0;
+	}
 }

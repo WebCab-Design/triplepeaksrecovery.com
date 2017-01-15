@@ -11,11 +11,11 @@
 
 body {
     background: white;
-    overflow-x: hidden;
 }
 
-header, main, footer {
+body, header, main, footer {
     width: 100%;
+    overflow-x: hidden;
 }
 
 header {
@@ -26,7 +26,7 @@ header {
 
 section:nth-of-type(1) {
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     text-align: center;
     background-size: cover;
     background-position: center;
@@ -115,6 +115,8 @@ h2 {
 h3 {
     color: #00534a;
     font-size: 1.5em;
+    margin: 1rem auto;
+    text-align: center;
 }
 
 .connect {
@@ -217,9 +219,10 @@ h3 {
 }
 
 .button {
+    margin: 1rem;
     cursor: pointer;
     font-size: 1rem;
-    border-radius: 4px;
+    border-radius: 3px;
     text-transform: uppercase;
     padding: 0.5rem 1rem 0.5rem 1rem;
 }
@@ -230,13 +233,12 @@ h3 {
 }
 
 .light-neutral:hover {
-    color: #00534a;
     background: #f7f7f7;
 }
 
 .primary {
-    color: #dddddd;
     background: #00534a;
+    color: #dddddd;
 }
 
 .primary:hover {
@@ -273,8 +275,8 @@ h3 {
 }
 
 .tabs > div {
-    cursor: pointer;
     padding: 0.5rem;
+    cursor: pointer;
     display: inline-block;
 }
 
@@ -290,16 +292,15 @@ h3 {
 }
 
 .panel {
-    top: 0;
-    left: 100%;
-    position: absolute;
+    display: none;
 }
 
 .panel.active {
-    position: static;
+    display: block;
 }
 
 form {
+    margin: auto;
     padding: 1rem;
     max-width: 960px;
 }
@@ -318,8 +319,8 @@ form input[type="submit"] {
 }
 
 form img {
-    padding-right: 1rem;
-    padding-left: 1rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
     max-width: 250px;
     max-height: 70px;
     vertical-align: middle;
@@ -406,37 +407,14 @@ form img:hover {
 }
 
 .contact-section {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    width: 100%;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
     background: rgba(0, 83, 74, 0.4);
 }
 
-.contact-section h2 {
-    color: #00534a;
-    font-weight: 700;
-    margin: 0;
-}
-
-.contact-section h5 {
-    color: #fff;
-}
-
-.contact-section div {
-    margin: auto;
-    max-width: 960px;
-}
-
 .contact-section span {
-    font-weight: bold;
     color: #00534a;
-}
-
-.contact-section span {
     font-weight: 100;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-weight: thin;
     padding-bottom: 0.3rem;
     border-bottom: 1px solid #00534a;
 }
@@ -444,31 +422,29 @@ form img:hover {
 /*
 	footer
 */
-.upper-foot {
+footer > div:nth-child(1) {
     color: #00534a;
     background: #dddddd;
 }
 
-.lower-foot {
+footer > div:nth-child(2) {
     color: white;
     background: #00534a;
 }
 
-.lower-foot > div:nth-child(1) img {
+footer > div:nth-child(2) > div:nth-child(1) img {
     padding: 8px 0;
     max-width: 50px;
     max-height: 100px;
     vertical-align: middle;
     filter: grayscale(1);
-    -o-filter: grayscale(1);
     -ms-filter: grayscale(1);
     -moz-filter: grayscale(1);
     -webkit-filter: grayscale(1);
 }
 
-.lower-foot > div:nth-child(1) img:hover {
+footer > div:nth-child(2) > div:nth-child(1) img:hover {
     filter: grayscale(0);
-    -o-filter: grayscale(0);
     -ms-filter: grayscale(0);
     -moz-filter: grayscale(0);
     -webkit-filter: grayscale(0);
@@ -500,4 +476,22 @@ footer .links > div > h3 {
 footer .copyright a {
     color: white;
     text-decoration: underline;
+}
+
+@media screen and (max-width: 700px) {
+    section:nth-of-type(1) img {
+        width: 50%;
+    }
+    section:nth-of-type(1) h1 {
+        font-size: 1.9rem;
+    }
+    section:nth-of-type(1) h2 {
+        font-size: 1.6rem;
+    }
+    .connect a > span {
+        display: none;
+    }
+    form img {
+        margin: 0;
+    }
 }
