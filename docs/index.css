@@ -4,8 +4,8 @@
   color: #444;
   font-size: 16px;
   box-sizing: border-box;
-  transition: all 300ms ease-in-out;
-  font-family: 'Open Sans', sans-serif;
+  font-family: sans-serif;
+  transition: all 300ms ease;
 }
 body {
   background: #fff;
@@ -327,7 +327,7 @@ textarea {
   text-decoration: none;
 }
 .paralax {
-  padding: 6%;
+  padding: 6rem;
   text-align: center;
   background-size: cover;
   background-position: center;
@@ -339,8 +339,8 @@ textarea {
   margin: auto;
 }
 .paralax h3 {
-  color: #fff;
   margin: 1rem;
+  color: #fff;
 }
 .boxes {
   max-width: none;

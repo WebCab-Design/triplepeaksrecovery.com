@@ -1,25 +1,28 @@
 {
-  "name": "triple-peaks",
+  "name": "triplepeaksrecovery.com",
   "version": "1.0.0",
-  "description": "triple-peaks",
+  "description": "<a href=\"tel:+01-855-430-8630\">Get Help Today: 855-430-8630</a>",
   "main": "index.js",
   "scripts": {
-    "serve": "muleify serve -w src dist",
+    "test": "muleify serve -w src dev",
     "build": "rm -r docs/* && muleify pack src docs",
     "cp": "cp node_modules/jenie/dist/jenie.polly.min.js src/assets/js/."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/WebCab-Design/peaks-recovery.git"
-  },
-  "author": "WebCab",
+  "author": "AJ",
   "license": "SEE LICENSE IN LICENSE",
-  "bugs": {
-    "url": "https://github.com/WebCab-Design/peaks-recovery/issues"
-  },
-  "homepage": "https://github.com/WebCab-Design/peaks-recovery#readme",
   "dependencies": {
     "astatine": "^1.2.0",
     "flexboxgrid": "^6.3.1"
-  }
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebCab-Design/triplepeaksrecovery.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WebCab-Design/triplepeaksrecovery.com/issues"
+  },
+  "homepage": "https://github.com/WebCab-Design/triplepeaksrecovery.com#readme"
 }
