@@ -1,7 +1,7 @@
 {
   "name": "triplepeaksrecovery.com",
   "version": "1.0.0",
-  "description": "<a href=\"tel:+01-855-430-8630\">Get Help Today: 855-430-8630</a>",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "muleify serve -w src dev",
